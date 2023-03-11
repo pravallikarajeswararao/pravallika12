@@ -1,0 +1,4 @@
+create table telecommunication_company(From mobile number (35), To mobile Number (30), call duration Number (30));
+Insert into telecommunication_company from mobile ; To mobile,call duration values( 9898989898,89898989898,00:05:23)
+select district from_mobile from telecommunication_company
+select distinct from_mobile from telecommunication_company where to_char(call_duriation, 'MI')<1
