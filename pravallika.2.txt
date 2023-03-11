@@ -1,0 +1,22 @@
+# read call log file
+with open('call_log.txt') as f:
+    call_log = f.readlines()
+
+# find distinct From Numbers
+from_numbers = set()
+for call in call_log:
+    from_number = call.split(',')[0].strip()
+    from_numbers.add(from_number)
+
+print(from_numbers)
+# find distinct From Numbers who used the Free Plan
+free_plan_numbers = set()
+for call in call_log:
+    from_number, to_number, call_duration = call.split(',')
+    call_duration = call_duration.strip()
+    hours, minutes, seconds = map(  , call_duration.split(':'))
+    total_seconds = hours*3600 + minutes*60 + seconds
+    if total_seconds < 60:
+        free_plan_numbers.add(from_number)
+
+print(free_plan_numbers)
